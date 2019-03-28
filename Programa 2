@@ -1,0 +1,67 @@
+package Programas;
+
+
+
+public class Porta {
+	private boolean aberta;
+	private String cor;
+	private int dimensaoX;
+	private int dimensaoY;
+	private int dimensaoZ;
+	
+	public void aberta() {
+		aberta = true;
+	}
+	public void fechada() {
+		aberta = false;
+	}
+	public boolean estaAberta() {
+		return aberta;
+	}
+	public void setCor(String novoCor) {
+		cor = novoCor;
+		
+	}
+	public String getCor() {
+		return  cor;
+		
+	}
+	public void setdimensaoX(int novoDimensaoX) {
+		
+	dimensaoX = novoDimensaoX;
+	}
+	public int getdimensaoX() {
+		
+		return dimensaoX;
+	}
+	public void setdimensaoY(int novoDimensaoY) {
+		
+		dimensaoY = novoDimensaoY;
+	}
+	public int getdimensaoY() {
+			
+		return dimensaoY;
+	}
+	public void setdimensaoZ(int novoDimensaoZ) {
+			
+		dimensaoZ = novoDimensaoZ;
+	}
+	public int getdimensaoZ() {
+				
+				return dimensaoZ;
+	}
+	
+	public static void main (String [] args){
+		
+		Porta p1 = new Porta();
+		p1.setdimensaoX(10);
+		p1.setdimensaoY(9);
+		p1.setdimensaoZ(8);
+		p1.setCor("Vermelho");
+	    p1.fechada();
+		
+		System.out.println(p1.getCor() + " " + p1.getdimensaoX()+ " " + p1.getdimensaoY()+ " " + p1.getdimensaoZ()+ " " + p1.estaAberta());
+	
+
+}
+}
