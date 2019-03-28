@@ -1,0 +1,99 @@
+package Programas;
+
+public class Casa {
+	
+	private String corCasa;
+	private Porta porta1;
+	private Porta porta2;
+	private Porta porta3;
+	private int abertas;
+	
+	
+		public Casa() {
+			
+			
+			
+			this.pinta ("Rosa");
+			
+			Porta porta1 = new Porta();
+			porta1.setCor("Branca");
+			porta1.setdimensaoX(3);
+			porta1.setdimensaoY(4);
+			porta1.setdimensaoZ(5);
+			porta1.aberta();
+			
+			Porta porta2 = new Porta();
+			porta2.setCor("Vermelho");
+			porta2.setdimensaoX(3);
+			porta2.setdimensaoY(4);
+			porta2.setdimensaoZ(5);
+			porta2.fechada();
+			
+			Porta porta3 = new Porta();
+			porta3.setCor("Preto");
+			porta3.setdimensaoX(3);
+			porta3.setdimensaoY(4);
+			porta3.setdimensaoZ(5);
+			porta3.fechada();
+			
+			this.porta1 = porta1;
+			this.porta2 = porta2;
+			this.porta3 = porta3;
+			
+		}
+	
+	
+	public String getCor(){
+		
+		return corCasa;
+		
+	}
+	
+	public void pinta (String corNova) {
+		
+		corCasa = corNova;
+		
+	}
+	
+	
+	public int quantasPortasEstaoAbertas() {
+		
+		
+		
+		if (porta2.estaAberta()) 
+		{
+			
+			abertas++;
+			
+		}
+		
+		if (porta3.estaAberta()) 
+		
+		{
+			
+			abertas++;
+
+		
+		}
+
+		if (this.porta1.estaAberta() == true) 
+		{
+	
+			abertas++;
+	
+
+		}
+		
+		return abertas;
+
+	}
+		public static void main(String[] args){
+			
+			Casa minhaCasa = new Casa();
+			
+			minhaCasa.quantasPortasEstaoAbertas();
+			
+			System.out.println(" A casa tem  " + " " +  minhaCasa.abertas + " " + " portas abertas " );
+		}
+		
+}
