@@ -1,0 +1,44 @@
+package Programas;
+
+public class Pessoa {
+ private String nome;
+ private int idade;
+
+
+public void setNome(String novoNome) {
+	nome = novoNome;
+	
+}
+public String getNome() {
+	return  nome;
+	
+}
+public void setidade(int novoIdade) {
+	
+	idade = novoIdade;
+}
+public int getidade() {
+	
+	return idade;
+}
+public void fazerAniversario() {
+	
+	idade = idade + 1;
+}
+
+public static void main(String[] args) {
+	
+	
+	
+	Pessoa p1 = new Pessoa();
+	p1.setNome("Rodrigo");
+	p1.setidade(18);
+	p1.fazerAniversario();
+	p1.fazerAniversario();
+	p1.fazerAniversario();
+	p1.fazerAniversario();
+	p1.fazerAniversario();
+	p1.fazerAniversario();
+	System.out.println(p1.getNome() + " " + p1.getidade());
+}
+}
